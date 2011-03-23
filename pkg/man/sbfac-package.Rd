@@ -3,39 +3,25 @@
 \alias{sbfac}
 \docType{package}
 \title{
-What the package does (short line)
-~~ package title ~~
+Semiparametric Bayesian Factor-Analytic Copulae for Mixed Data
 }
 \description{
-More about what it does (maybe more than one line)
-~~ A concise (1-5 lines) description of the package ~~
+This package provides MCMC model fitting for the semiparametric Bayesian factor-analytic copula model,
+an analogue of traditional factor analysis where inference is based on the (unobserved) correlation
+matrix of a Gaussian copula instead of the covariance or correlation matrix of the data itself. It handles
+ordinal data that is discrete or continuous using an approximate rank-based likelihood.
 }
 \details{
 \tabular{ll}{
 Package: \tab sbfac\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
+Version: \tab 0.1.9.7\cr
 Date: \tab 2011-03-17\cr
-License: \tab What license is it under?\cr
+License: \tab GPL-3\cr
 LazyLoad: \tab yes\cr
 }
-~~ An overview of how to use the package, including the most important functions ~~
+
 }
 \author{
-Who wrote it
-
-Maintainer: Who to complain to <yourfault@somewhere.net>
-~~ The author and/or maintainer of the package ~~
-}
-\references{
-~~ Literature or other references for background information ~~
-}
-~~ Optionally other standard keywords, one per line, from file KEYWORDS in the R documentation directory ~~
-\keyword{ package }
-\seealso{
-~~ Optional links to other man pages, e.g. ~~
-~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
-}
-\examples{
-%% ~~ simple examples of the most important functions ~~
+Jared Murray \email{jared.murray@stat.duke.edu}
 }

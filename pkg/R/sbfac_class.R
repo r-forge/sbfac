@@ -1,4 +1,4 @@
-#sbfac <- function(D, ...) UseMethod("sbfac")
+
 
 #' Initialize an SBFAC model
 #'
@@ -13,6 +13,7 @@
 #' and rhoa, rhob are the parameters of the beta prior on rho.
 #' @param obslabel a character vector of labels for each observation
 #' @param varlabel a character vector of labels for each variable
+#' @param ... ignored
 #' @return An S3 object of class \code{sbfac}, which is a list. The elements
 #' ldata, loadings, scores, tauinv and rho are initialized values of model parameters. By default
 #' these are randomly initialized; you can overwrite them if desired.
