@@ -9,5 +9,6 @@ Description: This package provides semiparametric estimation of a Gaussian copul
 License: GPL-2
 LazyLoad: yes
 Depends: Rcpp (>= 0.8.6), RcppArmadillo
+Suggests: ggplot2
 LinkingTo: Rcpp, RcppArmadillo
 SystemRequirements: GNU make
