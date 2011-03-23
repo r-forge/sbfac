@@ -9,8 +9,8 @@
 #' @param num.factor number of factors
 #' @param load.var.type Not yet implemented
 #' @param priors A list of prior parameters. taua and taub are the shape and rate parameters
-#' for the gamma prior on tau (i.e. E[tau] = taua/taub) and rhoa, rhob are the parameters of the 
-#' beta prior on rho.
+#' for the gamma prior on the loadings precision tau (i.e. E[tau] = taua/taub) 
+#' and rhoa, rhob are the parameters of the beta prior on rho.
 #' @param obslabel a character vector of labels for each observation
 #' @param varlabel a character vector of labels for each variable
 #' @return An S3 object of class \code{sbfac}, which is a list. The elements
@@ -78,7 +78,6 @@ sbfacModel <- function(D, num.factor=1, load.var.type="byrow",
 #' @param x An sbfac object
 #' @param ... Ignored
 #' @method print sbfac
-#' @nord
 
 print.sbfac <- function(x, ...) {
 	cat("SBFAC model object\n")
@@ -87,4 +86,19 @@ print.sbfac <- function(x, ...) {
   cat("\nUse summary() for detailed output.\n")
 	}
 
+#' @param x An sbfac object
+#' @param ... Ignored
+#' @return A list with elements loadings and scores containing MCMC means
+#' @method mean sbfac
+mean.sbfac <- function(x, ...) {
+  return(list(loadings=x$post.loadings.mean, scores=x$post.scores.mean))
+}
+
+#' @param x An sbfac object
+#' @param ... Ignored
+#' @method var sbfac
+#' @return A list with elements loadings and scores containing MCMC variances
+var.sbfac <- function(x, ...) {
+  return(list(loadings=x$post.loadings.var, scores=x$post.scores.var))
+}
 
