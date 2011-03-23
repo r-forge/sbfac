@@ -1,0 +1,34 @@
+* installing *source* package ‘sbfac’ ...
+** libs
+*** arch - i386
+g++ -arch i386 -I/Library/Frameworks/R.framework/Resources/include -I/Library/Frameworks/R.framework/Resources/include/i386  -I/usr/local/include -I"/Users/jared/Library/R/2.12/library/Rcpp/include" -I"/Library/Frameworks/R.framework/Resources/library/RcppArmadillo/include"   -fPIC  -g -O2 -c impute_erl.cpp -o impute_erl.o
+g++ -arch i386 -I/Library/Frameworks/R.framework/Resources/include -I/Library/Frameworks/R.framework/Resources/include/i386  -I/usr/local/include -I"/Users/jared/Library/R/2.12/library/Rcpp/include" -I"/Library/Frameworks/R.framework/Resources/library/RcppArmadillo/include"   -fPIC  -g -O2 -c rcpparma_hello_world.cpp -o rcpparma_hello_world.o
+g++ -arch i386 -I/Library/Frameworks/R.framework/Resources/include -I/Library/Frameworks/R.framework/Resources/include/i386  -I/usr/local/include -I"/Users/jared/Library/R/2.12/library/Rcpp/include" -I"/Library/Frameworks/R.framework/Resources/library/RcppArmadillo/include"   -fPIC  -g -O2 -c sbfac.cpp -o sbfac.o
+g++ -arch i386 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/usr/local/lib -o sbfac.so impute_erl.o rcpparma_hello_world.o sbfac.o /Users/jared/Library/R/2.12/library/Rcpp/lib/i386/libRcpp.a -L/Library/Frameworks/R.framework/Resources/lib/i386 -lRlapack -L/Library/Frameworks/R.framework/Resources/lib/i386 -lRblas -lgfortran -F/Library/Frameworks/R.framework/.. -framework R -Wl,-framework -Wl,CoreFoundation
+installing to /Users/jared/Dropbox/sbfac/sbfac.Rcheck/sbfac/libs/i386
+*** arch - x86_64
+g++ -arch x86_64 -I/Library/Frameworks/R.framework/Resources/include -I/Library/Frameworks/R.framework/Resources/include/x86_64  -I/usr/local/include -I"/Users/jared/Library/R/2.12/library/Rcpp/include" -I"/Library/Frameworks/R.framework/Resources/library/RcppArmadillo/include"   -fPIC  -g -O2 -c impute_erl.cpp -o impute_erl.o
+g++ -arch x86_64 -I/Library/Frameworks/R.framework/Resources/include -I/Library/Frameworks/R.framework/Resources/include/x86_64  -I/usr/local/include -I"/Users/jared/Library/R/2.12/library/Rcpp/include" -I"/Library/Frameworks/R.framework/Resources/library/RcppArmadillo/include"   -fPIC  -g -O2 -c rcpparma_hello_world.cpp -o rcpparma_hello_world.o
+g++ -arch x86_64 -I/Library/Frameworks/R.framework/Resources/include -I/Library/Frameworks/R.framework/Resources/include/x86_64  -I/usr/local/include -I"/Users/jared/Library/R/2.12/library/Rcpp/include" -I"/Library/Frameworks/R.framework/Resources/library/RcppArmadillo/include"   -fPIC  -g -O2 -c sbfac.cpp -o sbfac.o
+g++ -arch x86_64 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/usr/local/lib -o sbfac.so impute_erl.o rcpparma_hello_world.o sbfac.o /Users/jared/Library/R/2.12/library/Rcpp/lib/x86_64/libRcpp.a -L/Library/Frameworks/R.framework/Resources/lib/x86_64 -lRlapack -L/Library/Frameworks/R.framework/Resources/lib/x86_64 -lRblas -lgfortran -F/Library/Frameworks/R.framework/.. -framework R -Wl,-framework -Wl,CoreFoundation
+installing to /Users/jared/Dropbox/sbfac/sbfac.Rcheck/sbfac/libs/x86_64
+** R
+** preparing package for lazy loading
+Loading required package: reshape
+Loading required package: plyr
+
+Attaching package: 'reshape'
+
+The following object(s) are masked from 'package:plyr':
+
+    round_any
+
+Loading required package: grid
+Loading required package: proto
+** help
+Warning: /Users/jared/Dropbox/sbfac/sbfac.Rcheck/00_pkg_src/sbfac/man/sbfac-package.Rd:33: All text must be in a section
+*** installing help indices
+** building package indices ...
+** testing if installed package can be loaded
+
+* DONE (sbfac)

@@ -1,0 +1,161 @@
+* using log directory ‘/Users/jared/Dropbox/sbfac/sbfac.Rcheck’
+* using R version 2.12.2 (2011-02-25)
+* using platform: x86_64-apple-darwin9.8.0 (64-bit)
+* using session charset: UTF-8
+* checking for file ‘sbfac/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘sbfac’ version ‘0.1.9.7’
+* checking package name space information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking for executable files ... OK
+* checking whether package ‘sbfac’ can be installed ... WARNING
+Found the following significant warnings:
+  Warning: /Users/jared/Dropbox/sbfac/sbfac.Rcheck/00_pkg_src/sbfac/man/sbfac-package.Rd:33: All text must be in a section
+See ‘/Users/jared/Dropbox/sbfac/sbfac.Rcheck/00install.out’ for details.
+* checking package directory ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking DESCRIPTION meta-information ... OK
+* checking top-level files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* loading checks for arch ‘i386’
+** checking whether the package can be loaded ... OK
+** checking whether the package can be loaded with stated dependencies ... OK
+** checking whether the package can be unloaded cleanly ... OK
+** checking whether the name space can be loaded with stated dependencies ... OK
+** checking whether the name space can be unloaded cleanly ... OK
+* loading checks for arch ‘x86_64’
+** checking whether the package can be loaded ... OK
+** checking whether the package can be loaded with stated dependencies ... OK
+** checking whether the package can be unloaded cleanly ... OK
+** checking whether the name space can be loaded with stated dependencies ... OK
+** checking whether the name space can be unloaded cleanly ... OK
+* checking for unstated dependencies in R code ... OK
+* checking S3 generic/method consistency ... WARNING
+print:
+  function(x, ...)
+print.sbfac:
+  function(model, ...)
+
+See section 'Generic functions and methods' of the 'Writing R
+Extensions' manual.
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+plotLoadingsHeat: no visible binding for global variable ‘Factor’
+plotLoadingsHeat: no visible binding for global variable ‘Group’
+plotLoadingsHeat: no visible binding for global variable ‘value’
+plotLoadingsTxt: no visible binding for global variable ‘Factor’
+plotLoadingsTxt: no visible binding for global variable ‘y’
+plotLoadingsTxt: no visible binding for global variable ‘Group’
+plotLoadingsTxt: no visible binding for global variable ‘value’
+sbfac.default: no visible binding for global variable ‘K’
+sbfac.default: no visible binding for global variable ‘P’
+sbfac.default: no visible binding for global variable ‘N’
+* checking Rd files ... WARNING
+prepare_Rd: plotLoadingsHeat.Rd:7-9: Dropping empty section \description
+prepare_Rd: plotLoadingsHeat.Rd:31-33: Dropping empty section \details
+prepare_Rd: plotLoadingsHeat.Rd:34-40: Dropping empty section \value
+prepare_Rd: plotLoadingsHeat.Rd:47-49: Dropping empty section \note
+prepare_Rd: plotLoadingsHeat.Rd:44-46: Dropping empty section \author
+prepare_Rd: plotLoadingsHeat.Rd:41-43: Dropping empty section \references
+prepare_Rd: plotLoadingsHeat.Rd:53-55: Dropping empty section \seealso
+checkRd: (5) plotLoadingsHeat.Rd:0-69: Must have a \description
+prepare_Rd: sbfac-package.Rd:33: All text must be in a section
+prepare_Rd: sbfac-package.Rd:39-41: Dropping empty section \examples
+prepare_Rd: updateLoadingsVarC.Rd:7-9: Dropping empty section \description
+prepare_Rd: updateLoadingsVarC.Rd:28-30: Dropping empty section \details
+prepare_Rd: updateLoadingsVarC.Rd:31-37: Dropping empty section \value
+prepare_Rd: updateLoadingsVarC.Rd:44-46: Dropping empty section \note
+prepare_Rd: updateLoadingsVarC.Rd:41-43: Dropping empty section \author
+prepare_Rd: updateLoadingsVarC.Rd:38-40: Dropping empty section \references
+prepare_Rd: updateLoadingsVarC.Rd:50-52: Dropping empty section \seealso
+checkRd: (5) updateLoadingsVarC.Rd:0-66: Must have a \description
+prepare_Rd: updateLoadingsVarJC.Rd:7-9: Dropping empty section \description
+prepare_Rd: updateLoadingsVarJC.Rd:28-30: Dropping empty section \details
+prepare_Rd: updateLoadingsVarJC.Rd:31-37: Dropping empty section \value
+prepare_Rd: updateLoadingsVarJC.Rd:44-46: Dropping empty section \note
+prepare_Rd: updateLoadingsVarJC.Rd:41-43: Dropping empty section \author
+prepare_Rd: updateLoadingsVarJC.Rd:38-40: Dropping empty section \references
+prepare_Rd: updateLoadingsVarJC.Rd:50-52: Dropping empty section \seealso
+checkRd: (5) updateLoadingsVarJC.Rd:0-66: Must have a \description
+prepare_Rd: updateRho.Rd:7-9: Dropping empty section \description
+prepare_Rd: updateRho.Rd:28-30: Dropping empty section \details
+prepare_Rd: updateRho.Rd:31-37: Dropping empty section \value
+prepare_Rd: updateRho.Rd:44-46: Dropping empty section \note
+prepare_Rd: updateRho.Rd:41-43: Dropping empty section \author
+prepare_Rd: updateRho.Rd:38-40: Dropping empty section \references
+prepare_Rd: updateRho.Rd:50-52: Dropping empty section \seealso
+checkRd: (5) updateRho.Rd:0-66: Must have a \description
+prepare_Rd: updateScoresC.Rd:7-9: Dropping empty section \description
+prepare_Rd: updateScoresC.Rd:25-27: Dropping empty section \details
+prepare_Rd: updateScoresC.Rd:28-34: Dropping empty section \value
+prepare_Rd: updateScoresC.Rd:41-43: Dropping empty section \note
+prepare_Rd: updateScoresC.Rd:38-40: Dropping empty section \author
+prepare_Rd: updateScoresC.Rd:35-37: Dropping empty section \references
+prepare_Rd: updateScoresC.Rd:47-49: Dropping empty section \seealso
+checkRd: (5) updateScoresC.Rd:0-63: Must have a \description
+prepare_Rd: updateSparseLoadings.Rd:7-9: Dropping empty section \description
+prepare_Rd: updateSparseLoadings.Rd:31-33: Dropping empty section \details
+prepare_Rd: updateSparseLoadings.Rd:34-40: Dropping empty section \value
+prepare_Rd: updateSparseLoadings.Rd:47-49: Dropping empty section \note
+prepare_Rd: updateSparseLoadings.Rd:44-46: Dropping empty section \author
+prepare_Rd: updateSparseLoadings.Rd:41-43: Dropping empty section \references
+prepare_Rd: updateSparseLoadings.Rd:53-55: Dropping empty section \seealso
+checkRd: (5) updateSparseLoadings.Rd:0-69: Must have a \description
+prepare_Rd: updateSparseLoadingsJ.Rd:7-9: Dropping empty section \description
+prepare_Rd: updateSparseLoadingsJ.Rd:31-33: Dropping empty section \details
+prepare_Rd: updateSparseLoadingsJ.Rd:34-40: Dropping empty section \value
+prepare_Rd: updateSparseLoadingsJ.Rd:47-49: Dropping empty section \note
+prepare_Rd: updateSparseLoadingsJ.Rd:44-46: Dropping empty section \author
+prepare_Rd: updateSparseLoadingsJ.Rd:41-43: Dropping empty section \references
+prepare_Rd: updateSparseLoadingsJ.Rd:53-55: Dropping empty section \seealso
+checkRd: (5) updateSparseLoadingsJ.Rd:0-69: Must have a \description
+* checking Rd metadata ... OK
+* checking Rd cross-references ... WARNING
+Unknown package(s) ‘<pkg>’ in Rd xrefs
+* checking for missing documentation entries ... WARNING
+Undocumented code objects:
+  MCMCstep givensrot plotLoadingsTxt print.sbfac rcpparma_hello_world
+  sbfac.default updateLoadingsVarJC updateZ
+All user-level objects in a package should have documentation entries.
+See the chapter 'Writing R documentation files' in manual 'Writing R
+Extensions'.
+* checking for code/documentation mismatches ... WARNING
+Functions/methods with usage in documentation object 'pdateLoadingsVarJC' but not in code:
+  pdateLoadingsVarJC
+
+Codoc mismatches from documentation object 'plotLoadingsHeat':
+plotLoadingsHeat
+  Code: function(RscApost, xax = NA, yax = NA, col = c("#053061",
+                 "#2166AC", "#4393C3", "#92C5DE", "#D1E5F0", "#F7F7F7",
+                 "#FDDBC7", "#F4A582", "#D6604D", "#B2182B",
+                 "#67001F"), sorting = NA)
+  Docs: function(Z_, A_, F_, tauinv_, rho_)
+  Argument names in code not in docs:
+    RscApost xax yax col sorting
+  Argument names in docs not in code:
+    Z_ A_ F_ tauinv_ rho_
+  Mismatches in argument names (first 3):
+    Position: 1 Code: RscApost Docs: Z_
+    Position: 2 Code: xax Docs: A_
+    Position: 3 Code: yax Docs: F_
+
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking line endings in C/C++/Fortran sources/headers ... OK
+* checking line endings in Makefiles ... OK
+* checking for portable compilation flags in Makevars ... OK
+* checking for portable use of $(BLAS_LIBS) and $(LAPACK_LIBS) ... OK
+* checking examples ...
+** running examples for arch ‘i386’ ... OK
+** running examples for arch ‘x86_64’ ... OK
+* checking PDF version of manual ... OK
+WARNING: There were 6 warnings, see
+  ‘/Users/jared/Dropbox/sbfac/sbfac.Rcheck/00check.log’
+for details
