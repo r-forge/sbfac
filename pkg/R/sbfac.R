@@ -54,6 +54,8 @@ doMCMC <- function(model, nsim, nburn, thin=1, print.status=200, keep.scores=FAL
 	sim = .MCMCstep(model$ldata, model$loadings, model$scores, model$tauinv, 
 		 model$rho, model$ranks, model$maxes, model$argsorts, 
 		 model$priors, nsim, nburn, thin, print.status, keep.scores, keep.loadings)
+  
+  K = model$K; P = model$P; N = model$N
 	
   if (keep.scores)   { dim(sim$Fp)=c(K,N,nsim/thin) }
 	if (keep.loadings) { dim(sim$Ap)=c(P,K,nsim/thin) }
