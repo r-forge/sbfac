@@ -4,10 +4,10 @@ Title: Semiparametric Bayesian Factor Analytic Copula Models
 Version: 0.1.9.7
 Date: 2011-03-17
 Author: Jared Murray
-Maintainer: Jared Murray <jsm38@duke.edu>
+Maintainer: Jared Murray <jared.murray@stat.duke.edu>
 Description: This package provides semiparametric estimation of a Gaussian copula model where the correlation matrix of the copula has a factor analytic decomposition.
 License: GPL-2
 LazyLoad: yes
-Depends: Rcpp (>= 0.8.6), RcppArmadillo, ggplot2
+Depends: Rcpp (>= 0.8.6), RcppArmadillo
 LinkingTo: Rcpp, RcppArmadillo
 SystemRequirements: GNU make
