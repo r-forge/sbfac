@@ -29,7 +29,7 @@ SEXP updateRho( SEXP rho_, SEXP A_, SEXP rhoa_, SEXP rhob_) ;
 SEXP updateSparseLoadings( SEXP Z_, SEXP A_, SEXP F_, SEXP tauinv_, SEXP rho_) ;
 SEXP updateSparseLoadingsJ( SEXP Z_, SEXP A_, SEXP F_, SEXP tauinv_, SEXP rho_) ;
 //SEXP MCMCstep( SEXP Z_, SEXP A_, SEXP F_, SEXP tauinv_, SEXP rho_ );
-SEXP MCMCstep( SEXP Z_, SEXP A_, SEXP F_, SEXP tauinv_, SEXP rho_ , SEXP Ra_, SEXP maxes_, SEXP argsorts_, SEXP priors_, SEXP nsim_, SEXP nburn_, SEXP thin_, SEXP keepscores_, SEXP keeploadings_);
+SEXP MCMCstep( SEXP Z_, SEXP A_, SEXP F_, SEXP tauinv_, SEXP rho_ , SEXP Ra_, SEXP maxes_, SEXP argsorts_, SEXP priors_, SEXP nsim_, SEXP nburn_, SEXP thin_, SEXP printstatus_, SEXP keepscores_, SEXP keeploadings_);
 }
 
 // definition
@@ -351,7 +351,9 @@ for (int i = 0; i < p; i++) {
 }
 
 
-SEXP MCMCstep( SEXP Z_, SEXP A_, SEXP F_, SEXP tauinv_, SEXP rho_ , SEXP Ra_, SEXP maxes_, SEXP argsorts_, SEXP priors_, SEXP nsim_, SEXP nburn_, SEXP thin_, SEXP keepscores_, SEXP keeploadings_){
+SEXP MCMCstep( SEXP Z_, SEXP A_, SEXP F_, SEXP tauinv_, SEXP rho_ , SEXP Ra_, SEXP maxes_, 
+			   SEXP argsorts_, SEXP priors_, SEXP nsim_, SEXP nburn_, SEXP thin_, SEXP printstatus_, 
+			   SEXP keepscores_, SEXP keeploadings_){
 BEGIN_RCPP
 	
 //Rcpp::List model(model_) ;
@@ -360,6 +362,8 @@ GetRNGstate();
 
 bool keepscores   = as<bool>(keepscores_);
 bool keeploadings = as<bool>(keeploadings_);
+
+int printstatus = as<int>(printstatus_);
 
 Rcpp::IntegerMatrix Ra(Ra_);
 Rcpp::IntegerMatrix argsorts(argsorts_);
@@ -405,26 +409,9 @@ int isamp = 0;
 mat_iterator iF = F.begin();
 mat_iterator iA = A.begin();
 
-//int score_size = 0;
-//if (keepscores) {
-//	load_size = samples*k*n
-//} else {
-//	load_size = 1;
-//	Rcpp::NumericVector Fp(1);
-//	Fp[0] = NA_REAL;
-//}
-
 int score_size = keepscores ? samples*k*n : 1;
 Rcpp::NumericVector Fp(score_size);
 vec_iterator iFp = Fp.begin();
-
-//int load_size = 0;
-//if (keeploadings) {
-//	Rcpp::NumericVector Ap(samples*k*p);
-//} else {
-//	Rcpp::NumericVector Ap(1);
-//	Ap[0] = NA_REAL;
-//}
 
 int load_size = keeploadings ? samples*k*p : 1;
 Rcpp::NumericVector Ap(load_size);
@@ -434,8 +421,7 @@ Rcpp::NumericVector scAp(k*p);
 vec_iterator iscAp = scAp.begin();
 arma::colvec armascAp(scAp.begin(), p*k, false);
 
-int w = k*p;
-arma::mat brep(1, w);
+Rprintf("Beginning MCMC...");
 
 for (int i=0; i<nburn+nsim; i++) {
 	sampleSparseLoadingsJ(Z, A, F, tauinv, rho, n, p, k );
@@ -443,6 +429,10 @@ for (int i=0; i<nburn+nsim; i++) {
 	sampleLoadingsVarJ(tauinv, Ar, taua, taub) ;
 	sampleRho(rho, Ar, rhoa, rhob);
 	sampleZ(Zr, Ra, maxes, argsorts, A, F);
+	
+	if (i%printstatus==0) {
+		Rprintf("iteration %d\n",i);
+	}
 	
 	if (i>=nburn && i%thin==0){
 		
