@@ -16,4 +16,5 @@ these are randomly initialized; you can overwrite them if desired.}
 for the gamma prior on the loadings precision tau (i.e. E[tau] = taua/taub) 
 and rhoa, rhob are the parameters of the beta prior on rho.}
 \item{obslabel}{a character vector of labels for each observation}
-\item{varlabel}{a character vector of labels for each variable}}
+\item{varlabel}{a character vector of labels for each variable}
+\item{...}{ignored}}

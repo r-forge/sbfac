@@ -75,7 +75,7 @@ sbfacModel <- function(D, num.factor=1, load.var.type="byrow",
   return(out)
 }
 
-
+#' Print method for sbfac object
 #' @param x An sbfac object
 #' @param ... Ignored
 #' @method print sbfac
@@ -87,6 +87,7 @@ print.sbfac <- function(x, ...) {
   cat("\nUse summary() for detailed output.\n")
 	}
 
+#' Extract posterior means from sbfac object
 #' @param x An sbfac object
 #' @param ... Ignored
 #' @return A list with elements loadings and scores containing MCMC means
@@ -95,6 +96,7 @@ mean.sbfac <- function(x, ...) {
   return(list(loadings=x$post.loadings.mean, scores=x$post.scores.mean))
 }
 
+#' Extract posterior variances from sbfac object
 #' @param x An sbfac object
 #' @param ... Ignored
 #' @method var sbfac
